@@ -88,6 +88,7 @@ body .chat-container #chat .message-container:first-child {
 body .chat-container #spacing-line {
     border-bottom: 2px #FF3562 dashed;
     height: 5px;
+    box-sizing: border-box;
     width: 95%;
 }
 
