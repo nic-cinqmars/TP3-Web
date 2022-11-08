@@ -52,6 +52,10 @@ body .chat-container #chat::-webkit-scrollbar-thumb {
     border-radius: 10px;
 }
 
+body .chat-container #chat::-webkit-scrollbar-thumb:vertical:hover {
+    background-color: #A74482;
+}
+
 body .chat-container #chat .message-container {
     display: flex;
     gap: 0 5px;
@@ -75,6 +79,10 @@ body .chat-container #chat .message-container:first-child {
 .message-container .username::after {
     font-style: normal;
     content: " : "
+}
+
+.message-container .message {
+    margin-right: 5px;
 }
 
 body .chat-container #spacing-line {
@@ -124,4 +132,8 @@ body .chat-container .input-section {
     cursor: pointer;
     margin: 0 10px;
     padding: 0;
+}
+
+.chat-container .input-section #send-message-button:hover {
+    transform: scale(1.2);
 }
