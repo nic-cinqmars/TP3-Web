@@ -1,0 +1,127 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url(../img/background.svg);
+    background-color: #FF3562;
+    background-size: cover;
+    color: #EAE1DF;
+    font-family: "Roboto", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+}
+
+body .chat-container {
+    margin: 150px auto;
+    height : 600px;
+    width: 800px;
+    background-color: #1B1B3A;
+    border: 10px #FF3562 ridge;
+    border-radius: 20px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:  space-evenly;
+    box-sizing: border-box;
+}
+
+body .chat-container #chat, body .chat-container .input-section {
+    width: 95%;
+}
+
+body .chat-container #chat {
+    height: 500px;
+    overflow-y: auto;
+    font-size: 14px;
+    scroll-behavior: smooth;
+}
+
+body .chat-container #chat::-webkit-scrollbar {
+    visibility: hidden;
+    width: 10px;
+}
+
+body .chat-container #chat::-webkit-scrollbar-track {
+    background-color: #693668;
+    border-radius: 10px;
+}
+
+body .chat-container #chat::-webkit-scrollbar-thumb {
+    background-color: #FF3562;
+    border-radius: 10px;
+}
+
+body .chat-container #chat .message-container {
+    display: flex;
+    gap: 0 5px;
+    margin-top: 5px;
+}
+
+body .chat-container #chat .message-container:first-child {
+    margin-top: 0;
+}
+
+.message-container .date {
+    font-weight: bold;
+    flex-shrink: 0;
+}
+
+.message-container .username {
+    font-style: italic;
+    flex-shrink: 0;
+}
+
+.message-container .username::after {
+    font-style: normal;
+    content: " : "
+}
+
+body .chat-container #spacing-line {
+    border-bottom: 2px #FF3562 dashed;
+    height: 5px;
+    width: 95%;
+}
+
+body .chat-container .input-section {
+    height : 50px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.chat-container .input-section #username {
+    font-variant: small-caps;
+    font-weight: bold;
+    padding-right: 3px;
+    border-right: 1px #EAE1DF solid;
+}
+
+.chat-container .input-section #message-input {
+    outline: none;
+    border: none;
+    background-image:none;
+    background-color:transparent;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+
+    border-bottom: 1px #EAE1DF dashed;
+    color:inherit;
+    flex-grow: 1;
+}
+
+.chat-container .input-section #message-input::placeholder {
+    font-style: italic;
+    color : #D9D3D2;
+}
+
+.chat-container .input-section #send-message-button {
+    color: inherit;
+    font-size: inherit;
+    border: none;
+    background: none;
+    cursor: pointer;
+    margin: 0 10px;
+    padding: 0;
+}
